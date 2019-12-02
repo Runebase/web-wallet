@@ -42,12 +42,12 @@
               bottom
             ></v-select>
           </v-flex>
-          <v-flex xs6>
+          <!-- <v-flex xs6>
             <v-subheader>LOG</v-subheader>
           </v-flex>
           <v-flex xs6>
             <file-creator color="red" :href="fileStr">DOWNLOAD LOGS</file-creator>
-          </v-flex>
+          </v-flex> -->
         </v-layout>
       </v-container>
     </v-card-text>
@@ -94,7 +94,7 @@ export default {
   },
   computed: {
     fileStr: function() {
-      return 'data:text/plain,'+this.$root.log.exportToArray().join("\n")
+      return true
     }
   },
   methods: {

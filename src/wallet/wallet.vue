@@ -22,7 +22,7 @@
         <i class="runebase-icon runebase-icon-logo"></i>
         <span class="text">RUNEBASE</span>
         <span @click="changeView('settings')">
-          --{{ $t('common.' + network) }}
+          {{ $t('common.' + network) }}
         </span>
         <v-btn flat @click="changeView('settings')" v-if="mode !== 'normal'">
           {{ $t('common.mode.' + mode) }}
@@ -40,7 +40,7 @@
               <restore-wif @restored="setWallet" v-show="isCurrent['restore_from_wif']"></restore-wif>
               <restore-mobile @restored="setWallet" v-show="isCurrent['restore_from_mobile']"></restore-mobile>
               <restore-key-file @restored="setWallet" v-show="isCurrent['restore_from_key_file']"></restore-key-file>
-              <restore-ledger @restored="setWallet"  v-if="isCurrent['restore_from_ledger']"></restore-ledger>
+              <!-- <restore-ledger @restored="setWallet"  v-if="isCurrent['restore_from_ledger']"></restore-ledger> -->
               <view-wallet :view="isCurrent['view']" v-if="isCurrent['view']"></view-wallet>
               <view-tx :view="isCurrent['transactions']" v-if="isCurrent['transactions']"></view-tx>
               <safe-send @send="setWallet" v-if="isCurrent['safe_send']"></safe-send>
@@ -112,7 +112,7 @@ export default {
         { icon: 'create', name: 'restore_from_wif' },
         { icon: 'phonelink_lock', name: 'restore_from_mobile' },
         { icon: 'cloud_upload', name: 'restore_from_key_file' },
-        { icon: 'flip_to_front', name: 'restore_from_ledger' },
+        //{ icon: 'flip_to_front', name: 'restore_from_ledger' },
         { divider: true, name: 'wallet' },
         { icon: 'account_balance_wallet', name: 'view' },
         { icon: 'list', name: 'transactions' },
