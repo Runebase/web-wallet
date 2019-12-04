@@ -1,5 +1,3 @@
-# runebase.io
-
 ### NVM
 ```
 apt-get update
