@@ -73,8 +73,9 @@ export default {
     return {
       lan: loadConfig.lan,
       lanSelect: [
+        { value: 'en', text: 'English'},
+        { value: 'pt', text: 'Portugues'},
         { value: 'zh', text: '中文'},
-        { value: 'en', text: 'En'},
         { value: 'ko', text: '한글'}
       ],
       network: loadConfig.network,
