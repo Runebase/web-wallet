@@ -20,8 +20,8 @@ nvm use v6
 
 #### Dev
 ```
-git clone https://github.com/runebase/runebase.io
-cd runebase.io
+git clone https://github.com/Runebase/web-wallet
+cd web-wallet
 npm i
 npm install browserify -g
 
